@@ -1,0 +1,51 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+}
+#result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Hind", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #678983;
+  color: white;
+  width: 100%;
+  margin-top: 20px;
+}
+body p {
+  font-size: 17px;
+  font-weight: 400;
+}
+#fruitList {
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#searchbtn {
+  margin-left: 10px;
+  width: 100px;
+  height: 30px;
+  background-color: #c89595;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #333;
+}
+#searchbtn:active {
+  transform: translateY(2px);
+}
+#fruitList input {
+  height: 20px;
+  border: 2px solid #678983;
+  font-size: 17px;
+  font-weight: 500;
+}
