@@ -31,8 +31,9 @@ body p {
   align-items: center;
   justify-content: flex-start;
 }
-#searchbtn {
-  margin-left: 10px;
+#searchbtn,
+#randombtn {
+  margin-left: 15px;
   width: 100px;
   height: 30px;
   background-color: #c89595;
@@ -40,12 +41,14 @@ body p {
   border-radius: 5px;
   box-shadow: 1px 1px 1px #333;
 }
-#searchbtn:active {
+#searchbtn,
+#randombtn:active {
   transform: translateY(2px);
 }
 #fruitList input {
-  height: 20px;
-  border: 2px solid #678983;
-  font-size: 17px;
-  font-weight: 500;
+  height: 25px;
+  border: 2px solid #533535;
+  font-size: 15px;
+  font-weight: 400;
+  color: #66806a;
 }

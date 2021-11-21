@@ -2,9 +2,11 @@ let fruitList = document.getElementById("fruitList");
 let fruitText = document.getElementById("fruit-text");
 let searchbtn = document.getElementById("searchbtn");
 let result = document.getElementById("result");
+let random = document.getElementById("randombtn");
 
 
 searchbtn.addEventListener("click",searchFruit);
+random.addEventListener("click",randomFruit);
 function searchFruit()
 {
     result.innerHTML = "";
@@ -14,9 +16,7 @@ function searchFruit()
     alert("Enter Fruit Name");
     }
     else
-    {
-        fetchfun();
-    }
+    fetchfun();
 }
 
 async function fetchfun(){
@@ -24,11 +24,11 @@ async function fetchfun(){
         let fet = await fetch("./fruityvise.json");
         let res = await  fet.json();
         insertValues(res);
-        console.log(res)
         }
 function insertValues(data)
 
 {
+
     let category = fruitText.value;
     let jsonlength = data.length;
     let flag = "false";
@@ -57,4 +57,21 @@ function insertValues(data)
     fruitText.value ="";
 
     }
+}
+async function randomFruit()
+{
+        let fet = await fetch("./fruityvise.json");
+        let res = await  fet.json();
+        let jsonlength = res.length;
+        let item = Math.floor(Math.random() * jsonlength )
+
+    result.innerHTML = `
+    <h1> ${res[item].name}</h1>
+    <p> carbohydrates : ${res[item].nutritions.carbohydrates}
+    <p> protein : ${res[item].nutritions.protein}
+    <p> Fat : ${res[item].nutritions.fat}
+    <p> calories : ${res[item].nutritions.calories}
+    <p> Sugar : ${res[item].nutritions.sugar}
+     `;
+
 }
